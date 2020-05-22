@@ -1,0 +1,55 @@
+<table>
+    <tr>
+        <td>
+            <h2>Players</h2>
+        </td>
+        <td>
+            <h2>Add new player</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul class="players">
+                <li *ngFor="let player of players">
+                    <a routerLink="/detail/{{player.id}}">
+                        <span class="badge">{{player.id}}</span>
+                        <strong>{{player.name}}</strong>, {{player.country}} ({{player.title}})
+                    </a>
+                    <button class="delete" title="delete player" (click)="delete(player)">x</button>
+                </li>
+            </ul>
+        </td>
+        <td class="align">
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <input #playerName />
+                        </td>
+                        <td rowspan="3">
+                            <button (click)="add(playerName.value, playerCountry.value, playerTitle.value); 
+                            playerName.value=''; playerCountry.value=''; playerTitle.value=''">
+                            add
+                        </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><input #playerCountry /></td>
+                    </tr>
+                    <tr>
+                        <td>Title</td>
+                        <td><input #playerTitle /></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+<!-- <app-player-detail [player]="selectedPlayer"></app-player-detail> -->

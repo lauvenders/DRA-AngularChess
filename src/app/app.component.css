@@ -1,0 +1,39 @@
+div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #ffeff4;
+    border-radius: 4px;
+}
+
+nav a:visited,
+a:link {
+    color: #d85682;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav a:hover {
+    color: #e4a10f;
+    background-color: #ffdae7;
+}
+
+nav a.active {
+    color: #e4a10f;
+}

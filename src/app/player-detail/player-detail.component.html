@@ -1,0 +1,25 @@
+<div *ngIf="player">
+
+    <h2 class="center">{{player.name | uppercase}} Details</h2>
+    <!-- <div><span>id: </span>{{player.id}}</div> -->
+    <div class="other">
+        <label>name:
+            <input [(ngModel)]="player.name" placeholder="name" />
+        </label>
+        <br>
+        <label>country:
+            <input [(ngModel)]="player.country" placeholder="country" />
+        </label>
+        <br>
+        <label>title:
+            <input [(ngModel)]="player.title" placeholder="title" />
+        </label>
+    </div>
+
+</div>
+
+<div class="center">
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+</div>
+<br>
